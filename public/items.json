@@ -1,0 +1,69 @@
+[
+    {
+      "id":1,
+      "name": "coffey",
+      "description": "Description for Item 1",
+      "price": 50.00
+    },
+    {
+      "id":2,
+      "name": "tea",
+      "description": "Description for Item 1",
+      "price": 60.00
+    },
+    {
+      "id":3,
+      "name": "orange juice",
+      "description": "Description for Item 1",
+      "price": 100.00
+    },
+    {
+      "id":4,
+      "name": "blueberry",
+      "description": "Description for Item 1",
+      "price": 50.00
+    },
+    {
+      "id":5,
+      "name": "mango",
+      "description": "Description for Item 1",
+      "price": 10.00
+    },
+    {
+      "id":6,
+      "name": "espresso",
+      "description": "Description for Item 2",
+      "price": 20.00
+    },
+    {
+      "id":7,
+      "name": "pinacolada",
+      "description": "Description for Item 2",
+      "price": 20.00
+    },
+    {
+      "id":8,
+      "name": " ice tea",
+      "description": "Description for Item 2",
+      "price": 20.00
+    },
+    {
+      "id":9,
+      "name": "redpoll",
+      "description": "Description for Item 2",
+      "price": 20.00
+    },
+    {
+      "id":10,
+      "name": "kola",
+      "description": "Description for Item 2",
+      "price": 20.00
+    },
+    {
+      "id":11,
+      "name": "barbican",
+      "description": "Description for Item 2",
+      "price": 20.00
+    }
+  ]
+  
