@@ -17,7 +17,6 @@ describe('ItemList Component', () => {
       </CartProvider>
     );
 
-    // Check if items are rendered
     items.forEach((item) => {
       expect(screen.getByText(item.name)).toBeInTheDocument();
       expect(screen.getByText(item.description)).toBeInTheDocument();
@@ -32,23 +31,18 @@ describe('ItemList Component', () => {
       </CartProvider>
     );
 
-    // Check that all items are initially rendered
     expect(screen.getByText('Item 1')).toBeInTheDocument();
     expect(screen.getByText('Item 2')).toBeInTheDocument();
     expect(screen.getByText('Item 3')).toBeInTheDocument();
 
-    // Simulate user typing 'Item 1' in the search input
     fireEvent.change(screen.getByPlaceholderText('Search items'), { target: { value: 'Item 1' } });
 
-    // Check that only 'Item 1' is displayed
     expect(screen.getByText('Item 1')).toBeInTheDocument();
     expect(screen.queryByText('Item 2')).not.toBeInTheDocument();
     expect(screen.queryByText('Item 3')).not.toBeInTheDocument();
 
-    // Simulate user clearing the search input
     fireEvent.change(screen.getByPlaceholderText('Search items'), { target: { value: '' } });
 
-    // Check that all items are displayed again
     expect(screen.getByText('Item 1')).toBeInTheDocument();
     expect(screen.getByText('Item 2')).toBeInTheDocument();
     expect(screen.getByText('Item 3')).toBeInTheDocument();
@@ -61,10 +55,8 @@ describe('ItemList Component', () => {
       </CartProvider>
     );
 
-    // Simulate user selecting 'price' from the sort dropdown
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'price' } });
 
-    // Check the order of items by price
     const sortedItemsByPrice = screen.getAllByText(/Item/);
     expect(sortedItemsByPrice[0]).toHaveTextContent('Item 1');
     expect(sortedItemsByPrice[1]).toHaveTextContent('Item 3');
@@ -78,10 +70,8 @@ describe('ItemList Component', () => {
       </CartProvider>
     );
 
-    // Simulate user selecting 'name' from the sort dropdown
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'name' } });
 
-    // Check the order of items by name
     const sortedItemsByName = screen.getAllByText(/Item/);
     expect(sortedItemsByName[0]).toHaveTextContent('Item 1');
     expect(sortedItemsByName[1]).toHaveTextContent('Item 2');
